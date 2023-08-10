@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('IMG/fundo2.jpg.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    height: 100vh;
+}
+.imagem-filme {
+    border: 1px solid #3498db; 
+    padding: 10px; 
+}
+
+
+.linha-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 0 10%; 
+}
+
+.linha {
+  width: 80%;
+  height: 60px;
+  margin-top: 100px;
+  background-color: rgb(77, 74, 74);
+  margin-left: 10%; 
+  margin-right: 10%; 
+  border: 1px solid grey; 
+  border-radius: 20px; 
+  position: relative
+}
+#numero {
+    position: absolute;
+    left: 10px; 
+    font-size: 40px; 
+    top: 10%;
+  }
+#text {
+    position: relative;
+    left: 40px; 
+    font-size: 30px; 
+    top: 13%;
+  }
+  .barra-separadora {
+    position: relative;
+    top: 50%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+  }
+  .coracao {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    cursor: pointer; 
+    transition: color 0.3s; 
+  }
+  
+  .coracao.vermelho {
+    color: red; /* Altera a cor para vermelho quando a classe .vermelho está presente */
+  }
+.sinopse {
+    width: 60%; /* Largura da sinopse */
+    height: 100px;
+    margin-left: 20px; /* Espaçamento à esquerda */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Borda arredondada */
+}
+
+/* Estilos CSS para o título da sinopse */
+.sinopse h2 {
+
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* Estilos CSS para as tags */
+.sinopse .tags {
+    margin-top: 5px;
+}
+
+.sinopse .tag {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 3px 8px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+}

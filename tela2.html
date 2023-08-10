@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="tela2.css">
+    <title>Pagina inicial</title>
+</head>
+<body>  
+    <div class="filme">
+        <img class="imagem-filme" src="IMG/jujut1.png" >
+
+    </div>
+    <div class="sinopse">
+        <h2>Sinopse</h2>
+        <p>Aqui vai a sinopse do filme...</p>
+        <div class="tags">
+            <span class="tag">Ação</span>
+            <span class="tag">Animação</span>
+            <span class="tag">Fantasia</span>
+        </div>
+    </div>
+    <div class="linha-container">
+        <div class="linha">
+
+            <span id="numero">8,7</span>
+
+            <div class="barra-separadora">
+            
+            <span class="coracao"><i class="fas fa-heart"></i></span>
+            
+            <span id="text">favoritar</span>
+            
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coracao = document.querySelector(".coracao");
+      
+          coracao.addEventListener("click", function () {
+            this.classList.toggle("vermelho");
+          });
+        });
+      </script>
+      
+</body>
+</html>
