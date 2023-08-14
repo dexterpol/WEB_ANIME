@@ -1,0 +1,1 @@
+m site de hospedagem de animes é uma plataforma online que oferece uma coleção de episódios de anime para streaming ou download, permitindo aos usuários assistir a esses animes de forma legal e conveniente
