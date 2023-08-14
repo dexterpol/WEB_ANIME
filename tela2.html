@@ -4,48 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
     <link rel="stylesheet" href="tela2.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <title>Pagina inicial</title>
 </head>
-<body>  
-    <div class="filme">
-        <img class="imagem-filme" src="IMG/jujut1.png" >
-
-    </div>
-    <div class="sinopse">
-        <h2>Sinopse</h2>
-        <p>Aqui vai a sinopse do filme...</p>
-        <div class="tags">
-            <span class="tag">Ação</span>
-            <span class="tag">Animação</span>
-            <span class="tag">Fantasia</span>
+<body>
+    <div class="filme-container">
+        <div class="filme">
+            <img class="imagem-filme" src="IMG/jujut1.png" width="200px">
         </div>
-    </div>
-    <div class="linha-container">
-        <div class="linha">
-
-            <span id="numero">8,7</span>
-
-            <div class="barra-separadora">
-            
-            <span class="coracao"><i class="fas fa-heart"></i></span>
-            
-            <span id="text">favoritar</span>
-            
+        <div class="sinopse">
+            <h2>Sinopse</h2>
+            <p>Yuji Itadori é um estudante do ensino médio que tem uma aversão por atividades físicas, mas ainda assim possui habilidades atléticas excepcionais. Após a morte de seu avô, ele se depara com um dedo amaldiçoado que faz parte de uma coleção de objetos malditos. Ao entrar em contato com o dedo, Yuji acidentalmente libera uma maldição poderosa e se vê envolvido no mundo dos feiticeiros e maldições.</p>
+            <div class="tags">
+                <span class="tag">Ação</span>
+                <span class="tag">Animação</span>
+                <span class="tag">Fantasia</span>
+            </div>
+            <div class="avaliacao">
+                <div class="estrelas">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                </div>
             </div>
         </div>
-        
     </div>
+    
+           
+            <div class="avaliacao">
+                <div class="estrelas">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                </div>
+            </div>
+       
+    <div class="episodios-carousel">
+        <div class="episodio" onclick="abrirModal('link-do-video-episodio1')">Episódio 1</div>
+        <div class="episodio"onclick="abrirModal('link-do-video-episodio2')">Episódio 2</div>
+        <div class="episodio">Episódio 3</div>
+        <div class="episodio">Episódio 3</div>
+        <div class="episodio">Episódio 4</div>
+        <div class="episodio">Episódio 5</div>
+        <!-- Adicione mais episódios conforme necessário -->
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <i class="fas fa-play-circle fa-3x"></i> 
+            <img id="video-image" src="./IMG/fundo.jpg"  width="800px" alt="Player de Vídeo">
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const coracao = document.querySelector(".coracao");
-      
-          coracao.addEventListener("click", function () {
-            this.classList.toggle("vermelho");
-          });
+        $(document).ready(function(){
+            $('.episodios-carousel').slick({
+                slidesToShow: 4, // Quantidade de episódios visíveis
+                slidesToScroll: 1,
+                prevArrow: '<button class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+            });
+
+            const coracao = document.querySelector(".coracao");
+
+            coracao.addEventListener("click", function () {
+                this.classList.toggle("vermelho");
+            });
         });
-      </script>
-      
+    </script>
+    <script src="js.js"></script>
 </body>
 </html>
